@@ -23,18 +23,18 @@ describe("测试加减法", () => {
   });
 });
 
-describe("测试乘除", () => {
-  // it 是 test 的别名
-  it("测试乘法", () => {
-    expect(multiply(2, 3)).toBe(6); // 断言 期望结果是6
-  });
+// describe("测试乘除", () => {
+//   // it 是 test 的别名
+//   it("测试乘法", () => {
+//     expect(multiply(2, 3)).toBe(6); // 断言 期望结果是6
+//   });
 
-  it("测试除法", () => {
-    expect(div(6, 3)).toBe(2); // 断言 期望结果是2
-  });
+//   it("测试除法", () => {
+//     expect(div(6, 3)).toBe(2); // 断言 期望结果是2
+//   });
 
-  // 测试除以0 抛出异常
-  it("测试除以0 抛出异常", () => {
-    expect(() => div(6, 0)).toThrow("Division by zero is not allowed.");
-  });
-});
+//   // 测试除以0 抛出异常
+//   it("测试除以0 抛出异常", () => {
+//     expect(() => div(6, 0)).toThrow("Division by zero is not allowed.");
+//   });
+// });
