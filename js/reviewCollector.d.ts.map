@@ -1,0 +1,1 @@
+{"version":3,"file":"reviewCollector.d.ts","sourceRoot":"","sources":["../ts/reviewCollector.ts"],"names":[],"mappings":"AAEA,OAAO,aAAa,MAAM,oBAAoB,CAAC;AAE/C,MAAM,CAAC,OAAO,OAAO,eAAe;IAChC,OAAO,CAAC,UAAU,CAAkB;IACpC,OAAO,CAAC,WAAW,CAAW;;IASvB,SAAS,CAAC,aAAa,EAAE,aAAa,GAAG,IAAI;IAS7C,gBAAgB,CAAC,WAAW,EAAE,MAAM,GAAG,MAAM;CASvD"}

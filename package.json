@@ -2,7 +2,22 @@
   "name": "test",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "repository": "https://github.com/sssssjy/learn-test.git",
   "author": "sssssjy <1286847869@qq.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node-fetch": "^2.6.13",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
+    "jest-fetch-mock": "^3.0.3",
+    "jest-location-mock": "^2.0.0",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "test": "jest"
+  }
 }
