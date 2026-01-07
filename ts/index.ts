@@ -11,10 +11,10 @@ const stopTimeoutBtn = document.getElementById("stopTimeoutBtn") as HTMLButtonEl
 const num1 = document.getElementById("num1") as HTMLDivElement;
 
 let counter = 0;
-let timerId: Timer;
+let timerId: Timer | undefined;
 
 let counter1 = 0;
-let timerId1: Timer;
+let timerId1: Timer | undefined;
 startBtn?.addEventListener("click", () => {
   timerId = startTimer(() => {
     counter++;
