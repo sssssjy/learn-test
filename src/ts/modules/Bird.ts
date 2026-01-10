@@ -1,5 +1,5 @@
 import getTimer from "./util";
-import type { getTimerType } from "../types/type";
+import type{ getTimerType } from "../types/type";
 import Game from "./Game";
 
 export default class Bird {

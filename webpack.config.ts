@@ -26,7 +26,10 @@ const config: Configuration & { devServer?: DevServerConfiguration } = {
       {
         test: /\.tsx?$/,
         use: "ts-loader",
-        exclude: path.resolve(__dirname, "node_modules"),
+        exclude: [
+          path.resolve(__dirname, "node_modules"),
+          path.resolve(__dirname, "__test__")
+        ],
       },
       {
         test: /\.css$/,
