@@ -1,83 +1,70 @@
-# 测试基本认知：为什么需要测试
+# Getting Started with Create React App
 
-## 保证软件质量和可靠性
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-1.发现和修复问题
-通过测试 可以提前发现一些功能不完善、性能低下、有安全漏洞的地方，从而进行修复操作 如果一个产品没有经过测试直接交付 会在用户使用的时候暴露出来 导致用户流失
+## Available Scripts
 
-2.验证软件是否符合需求和标准
-在软件开发中，需求和标准的定义往往是通过需求文档、设计文档以及用户操作流程等方式来确定 根据这些文档以及操作流程来编写测试用例 最终测试用例通过 可以间接说明我们的软件是符合需求和标准的
+In the project directory, you can run:
 
-3.降低维护成本
-软件维护成本是一个非常重要的考虑因素 如果软件存在缺陷和问题 那么软件上线后这些问题才被发现并修复 整个维护成本会大大增加
-一般来讲 越到后期 修复一个bug所付出的成本越大 因此 通过测试 可以提前帮助开发团队在软件上线之前就发现潜在的问题 并进行修复 从而降低软件的维护成本
+### `npm start`
 
-4.增强整个开发团队的信心
-在软件开发领域 有个bug破窗效应 指软件中如果存在一个bug 那么这个bug会导致一连串的连锁效应 从而导致一堆问题
-一旦软件中出现bug破窗 会影响团队士气 并且整个团队会为此付出极大精力
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-5.测试实际上也是遵循软件开发中的最佳实践
-无论是哪一种开发模式（瀑布、敏捷、devOps） 测试都是非常重要的环节 可以算是软件开发的最佳实践 使整个软件开发中不可缺少的一环 进行测试实际上就是在遵循软件开发的最佳实践
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## 测试种类
+### `npm test`
 
-由下往上分为：
-1.静态测试 static
-2.单元测试 unit
-3.集成测试 integration
-4.E2E测试 end to end
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### 静态测试
+### `npm run build`
 
-静态测试不会涉及到具体的代码运行 实在编写代码期间对代码进行检查和分析 捕获代码是可能出现的语法错误或者错别字
-对于前端 静态测试更倾向于用typescript或者eslint之类的静态检查工具 在编写代码时就能提示错误
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### 单元测试
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-验证某一个单独的部分是否能够正常的工作 软件测试中的最小测试单位 通常是一个函数或者一个方法
-往往是用开发人员来编写一个个测试用例 通过一些自动化工具进行测试
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-单元测试由于是对一个函数或者方法进行测试 是独立的一个单元 因此 在进行单元测试的时候 往往会屏蔽发送请求、连接数据库等功能 这些方法一般通过mock形式来实现
+### `npm run eject`
 
-### 集成测试
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-将多个单元组装起来进行测试 主要看这些单元在一起的时候是否能正常工作 集成测试的目的是确保整个系统中各个部分连接起来是能正常工作的
-到了集成测试的时候 就会链接真实的数据库 发送真实的网络请求 确保他们在协作的时候能够正常工作
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### E2E测试
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-end to end,端到端测试 测试整个软件系统的功能 模拟用户行为和软件进行交互
-相比集成测试 E2E测试会测试更加完整的功能 更像是一个真实用户和软件进行交互
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## TDD与BDD项目驱动模式
+## Learn More
 
-软件开发中以测试为中心的两种开发方法论
-TDD: Test-Driven Development 测试驱动开发
-BDD: Behavior-Driven Development 行为驱动开发
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### TDD模式
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-以测试为中心的开发方法 强调在编写代码之前先编写测试用例 然后再运行测试用例
-如果测试用例失败了 说明代码有问题 就需要修改代码指导所用的测试用例通过 再编写实际的代码
+### Code Splitting
 
-1.编写测试用例
-2.运行测试用例 如果测试用例失败 说明代码设计有问题 此时实际代码还未书写 因此此时会通过mock手段去模拟函数或模块的实现
-3.编写实际代码 替换上一步中所用到的mock方法
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### BDD模式
+### Analyzing the Bundle Size
 
-BDD是通过行为来驱动软件的开发 这里的行为指的是用户的行为 BDD的模式关注焦点并非在技术实现上的细节 而是用户行为和业务 更加注重协作和沟通
-BDD测试用例一般会采用自然语言编写 以便业务人员和QA都能读懂
-BDD的测试用例一般会采用Given-When-Then模式描述测试场景
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-例如测试登录：
-Given: 用户已经打开登录页面 并且没有输入任何内容
-When: 用户输入错误的用户名或密码 然后点击登录按钮
-Then: 页面上会显示错误提示信息“用户名或密码错误”
+### Making a Progressive Web App
 
-这是一种非常常见的模式 很多中小型企业 在没有使用自动化的测试框架的背景下 往往通过这种方式进行测试
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-总结：
-为什么需要测试？
-有哪些测试类型？
-TDD和BDD是什么？
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

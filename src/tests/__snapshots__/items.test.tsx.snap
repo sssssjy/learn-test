@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`测试快照 1`] = `
+<body>
+  <div>
+    <div>
+      <input
+        type="text"
+        value=""
+      />
+      <button>
+        添加
+      </button>
+      <ul>
+        <li>
+          苹果1
+        </li>
+        <li>
+          香蕉2
+        </li>
+        <li>
+          西瓜3
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+`;
